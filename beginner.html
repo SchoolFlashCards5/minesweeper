@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background: linear-gradient(50deg, #7DF9FF, #C978FA);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* content starts near top */
+        padding-top: 50px; /* some space at top */
+      }
+
+      /* button styling like index.html beginner button */
+      .beginner-btn {
+        background-color: #7DF9FF;
+        border-radius: 12px;
+        padding: 15px 30px;
+        font-size: 120%;
+        border: 3px solid #3ED8DE;
+        transition: 0.3s ease;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .beginner-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #3ED8DE;
+      }
+
+      .beginner-btn:active {
+        transform: scale(1.10);
+        box-shadow: 0 0 15px #3ED8DE;
+      }
+
+      h2 {
+        font-family: Verdana;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Minesweeper game -->
+    <div class="minesweeper-game" data-preset="beginner"></div>
+
+    <h2>Press the yellow face to restart the game at any time.</h2>
+
+    <!-- Go back button -->
+    <button class="beginner-btn" id="go-back-btn">Go back to difficulty selection</button>
+
+    <!-- Minesweeper script -->
+    <script src="https://minesweeper.github.io/a70de4b14c0109772a9dc7a4d43a2657210cc7d1.js"></script>
+
+    <!-- Script for go-back button -->
+    <script>
+      const goBackBtn = document.getElementById("go-back-btn");
+      goBackBtn.addEventListener("click", () => {
+        window.location.href = "index.html"; // replace with correct index path if needed
+      });
+    </script>
+  </body>
+</html>
