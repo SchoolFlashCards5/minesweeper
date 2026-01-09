@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<style>
+    	    /*buttons styling code*/
+    	    
+        	.beginner-btn {
+ 			    	 background-color: #7DF9FF;
+ 				     border-radius: 12px; 
+  			  	 padding: 15px 30px; 
+ 			    	 font-size: 120%;   
+ 		    		 border: 3px solid #3ED8DE;
+ 		    		 /*transition*/
+ 		    		 transition: 0.3s ease;
+		    	}
+            
+          .intermediate-btn {
+ 				     background-color: #C978FA;
+ 			    	 border-radius: 12px; 
+  			  	 padding: 15px 30px; 
+ 				     font-size: 120%;   
+ 			    	 border: 3px solid #A020F0;
+ 			    	 /*transition*/
+ 		    		 transition: 0.3s ease;
+		    	} 
+            
+           .expert-btn { 
+            	background-color: #FF7F7F; 
+            	border-radius: 12px; 
+            	padding: 15px 30px; 
+            	font-size: 120%; 
+            	border: 3px solid #FF0000;
+            	/*transition*/
+ 		    		  transition: 0.3s ease;
+            }
+            
+            /*button hover style code*/
+            
+            .beginner-btn:hover {
+              transform: scale(1.05);
+              box-shadow: 0 0 20px #3ED8DE;
+            }
+            
+            .intermediate-btn:hover {
+              transform: scale(1.05);
+              box-shadow: 0 0 20px #A020F0;
+            }
+            
+            .expert-btn:hover {
+              transform: scale(1.05);
+              box-shadow: 0 0 20px #FF0000;
+            }
+            
+            /*button onclick style code*/
+            
+            .beginner-btn:active {
+              transform: scale(1.10);
+              box-shadow: 0 0 15px #3ED8DE;
+            }
+            
+            .intermediate-btn:active {
+              transform: scale(1.10);
+              box-shadow: 0 0 15px #A020F0;
+            }
+            
+            .expert-btn:active {
+              transform: scale(1.10);
+              box-shadow: 0 0 15px #FF0000;
+            }
+            
+            /*text styling code*/
+            
+            .difficultytext-txt {
+              font-family: Verdana;
+            }
+            
+            /*div main area centering*/
+            
+            .mainarea {
+              display: flex;
+              flex-direction: column; 
+              justify-content: center; 
+              align-items: center;    
+            }
+            
+            html, body {
+             height: 100%;
+             margin: 0;
+            }
+
+            body {
+             background: linear-gradient(50deg, #7DF9FF, #C978FA);
+             background-repeat: no-repeat;
+             background-size: cover; /* fill entire viewport */
+            }
+
+
+
+    	</style>
+    </head>	
+	<body>
+	  <div class="mainarea">
+	  	<h1 class="difficultytext-txt">Choose your difficulty:</h1>
+	    	<br>
+	    	<br>
+	  	<button class="beginner-btn">Beginner.</button>
+        <br>
+        <br>
+        <br>
+	  	<button class="intermediate-btn">Intermediate?</button>
+        <br>
+        <br>
+        <br>
+	  	<button class="expert-btn">Expert!</button>
+	    	<br>
+    		<br>
+	    	<br>
+   	</div>
+    <script>
+     const beginnerBtn = document.querySelector(".beginner-btn");
+     const intermediateBtn = document.querySelector(".intermediate-btn");
+     const expertBtn = document.querySelector(".expert-btn");
+
+     beginnerBtn.addEventListener("click", () => {
+      window.location.href = "schoolflashcards5.github.io/minesweeper/beginner";
+     });
+
+     intermediateBtn.addEventListener("click", () => {
+      window.location.href = "schoolflashcards5.github.io/minesweeper/intermediate"; 
+     });
+
+     expertBtn.addEventListener("click", () => {
+       window.location.href = "schoolflashcards5.github.io/minesweeper/expert";
+     });
+    </script>
+  </body>
+
+</html>
