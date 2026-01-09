@@ -13,9 +13,10 @@
         background-size: cover;
         display: flex;
         flex-direction: column;
+        justify-content: space-between; /* top = game, bottom = info + button */
         align-items: center;
-        justify-content: flex-start;
-        padding-top: 50px;
+        padding: 20px 0;
+        box-sizing: border-box;
       }
 
       /* expert button styling like index.html */
@@ -27,7 +28,6 @@
         border: 3px solid #FF0000;
         transition: 0.3s ease;
         cursor: pointer;
-        margin-top: 20px;
       }
 
       .expert-btn:hover {
@@ -43,7 +43,13 @@
       h3 {
         font-family: Verdana;
         text-align: center;
-        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+
+      .bottom-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
     </style>
@@ -53,10 +59,11 @@
     <!-- Minesweeper game -->
     <div class="minesweeper-game" data-preset="expert"></div>
 
-    <h3>Press the yellow face to restart the game at any time.</h3>
-
-    <!-- Go back button -->
-    <button class="expert-btn" id="go-back-btn">Go back to difficulty selection</button>
+    <!-- Info + Go back button at bottom -->
+    <div class="bottom-area">
+      <h3>Press the yellow face to restart the game at any time.</h3>
+      <button class="expert-btn" id="go-back-btn">Go back to difficulty selection</button>
+    </div>
 
     <!-- Minesweeper script -->
     <script src="https://minesweeper.github.io/a70de4b14c0109772a9dc7a4d43a2657210cc7d1.js"></script>
@@ -65,10 +72,8 @@
     <script>
       const goBackBtn = document.getElementById("go-back-btn");
       goBackBtn.addEventListener("click", () => {
-        window.location.href = "selection.html";
+        window.location.href = "https://schoolflashcards5.github.io/minesweeper/selection.html";
       });
     </script>
   </body>
 </html>
-
-
